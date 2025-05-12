@@ -7,3 +7,36 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+puts "Cleaning database..."
+Recipe.destroy_all
+
+# creating an arry of recipes
+Recipe.create!([
+  {
+    name: "Spaghetti Carbonara",
+    description: "Classic Roman pasta with eggs, cheese, pancetta, and pepper.",
+    image_url: "https://images.pexels.com/photos/546945/pexels-photo-546945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    rating: 4.3
+  },
+  {
+    name: "Chicken Curry",
+    description: "Spicy and creamy Indian-style curry.",
+    image_url: "https://images.pexels.com/photos/9345647/pexels-photo-9345647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    rating: 4.9
+  },
+  {
+    name: "Avocado Toast",
+    description: "Toasted bread topped with mashed avocado and seasoning.",
+    image_url: "https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    rating: 4
+  },
+  {
+    name: "Beef Tacos",
+    description: "Ground beef tacos with lettuce, cheese, and salsa.",
+    image_url: "https://images.pexels.com/photos/31970715/pexels-photo-31970715/free-photo-of-authentic-mexican-tacos-with-beef-and-avocado.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    rating: 4.5
+  }
+])
+
+# 3. Display a message 🎉
+puts "Finished! Created #{Recipe.count} recipes."
