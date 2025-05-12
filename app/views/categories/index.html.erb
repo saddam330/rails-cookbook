@@ -1,0 +1,9 @@
+<h1>Cook Book</h1>
+<ul class = "list-group">
+  <% @categories.each do |category| %>
+  <li class = "list-group-item">
+    <%= link_to category.name, category_path(category) %>
+  </li>
+
+  <% end %>
+</ul>
