@@ -1,0 +1,14 @@
+.banner {
+  height:  400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: center;
+  background-repeat: no-repeat;
+  h1, h3 {
+    color: rgb(26, 19, 19);
+    text-align: center;
+    font-weight: bold;
+  }
+}

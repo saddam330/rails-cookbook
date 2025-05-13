@@ -1,9 +1,28 @@
-<h1>Cook Book</h1>
-<ul class = "list-group">
-  <% @categories.each do |category| %>
-  <li class = "list-group-item">
-    <%= link_to category.name, category_path(category) %>
-  </li>
-  <% end %>
-</ul>
- <p><%= link_to "Add new Category", new_category_path %></p>
+<div class="banner" style="background-image: url('<%= image_path("banner.jpg") %>')">
+  <div class="headings">
+    <h1>CookBook</h1>
+    <h3>Save your favourites recipes</h3>
+  </div>
+</div>
+
+<div class="container w-75">
+  <div class="info-top">
+    <h2>List of Categories</h2>
+    <%= link_to 'New category', new_category_path, class: "btn btn-warning" %>
+  </div>
+
+
+  <div class="cards">
+    <% @categories.each do |category| %>
+      <%= link_to category_path(category) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <div>
+            <h3><%= category.name %></h3>
+            <p><%= category.bookmarks.count %> recipes</p>
+          </div>
+        </div>
+      <% end %>
+
+    <% end %>
+  </div>
+</div>

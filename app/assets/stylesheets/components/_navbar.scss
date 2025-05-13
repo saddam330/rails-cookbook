@@ -1,0 +1,54 @@
+.navbar {
+  background-color: white;
+  padding: 5px 20px;
+  font-weight: bold;
+
+  img {
+    width: 120px;
+    border-radius: 50%;
+  }
+  .navbar_links {
+    display: flex;
+    gap: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      color: #A34B00
+    }
+  }
+}
+// .navbar-lewagon {
+//   justify-content: space-between;
+//   background: white;
+// }
+
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
+
+// .navbar-lewagon .navbar-brand img {
+//   width: 40px;
+// }
+// .navbar {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 10px 20px;
+//   border-radius: 15px;
+//   border: 2px solid #333;
+//   margin: 20px;
+// }
+// .logo {
+//   padding: 5px 15px;
+
+// }
+// .nav-buttons {
+//   display: flex;
+//   gap: 10px;
+// }
+// .nav-btn {
+//   border-radius: 10px;
+// }

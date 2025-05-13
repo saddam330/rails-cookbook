@@ -1,6 +1,11 @@
-<h1>Create new Category</h1>
-<%= simple_form_for @category do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>
-<p><%= link_to "Back to Cook Book", categories_path %></p>
+<div class="form-container">
+  <h2>Add a new Category</h2>
+
+  <%= simple_form_for @category, html: { multipart: true } do |f| %>
+    <%= f.input :name, placeholder: "The category name.." %>
+
+    <%= f.input :photo, as: :file, label: "Photo" %>
+
+    <%= f.button :submit, "Create Category", class: "btn-submit" %>
+  <% end %>
+</div>

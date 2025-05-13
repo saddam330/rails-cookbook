@@ -1,0 +1,17 @@
+// Specific CSS for your home-page
+.info-top {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0px;
+  font-weight: 400;
+
+  a {
+    color: white;
+
+    &:hover {
+      color: white;
+    }
+
+
+  }
+}
